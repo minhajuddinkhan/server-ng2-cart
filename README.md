@@ -1,3 +1,4 @@
+
 # server-ng2-cart
 A play around with NodeJS + Angular2 App 
 
@@ -8,6 +9,5 @@ A play around with NodeJS + Angular2 App
  # Clone Project
  
  You can clone the project by typing ``` git clone https://github.com/minhajuddinkhan/server-ng2-cart ``` :)
-
 
 
