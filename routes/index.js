@@ -6,7 +6,7 @@ module.exports = class {
 
     // **** Auth Routes ******* //
     require('./auth').setup(router);
-
+    require('./cart').setup(router);
 
     app.use(router);
 

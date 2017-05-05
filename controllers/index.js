@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-  auth: require('./auth')
+  auth: require('./auth'),
+  cart: require('./cart')
 }
