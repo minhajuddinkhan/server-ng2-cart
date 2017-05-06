@@ -20,6 +20,8 @@ import { FormGroup, FormControl} from '@angular/forms'
 export class DashboardComponent {
 
   cart: FormData
+  state: string
+  imageExists: boolean;
 
   constructor(
     private dashboardService: DashboardService,
@@ -28,6 +30,8 @@ export class DashboardComponent {
     private authService: AuthService,
     private element: ElementRef
   ) {
+    this.state = 'list'
+    this.imageExists = false;
     this.cart = new FormData();
   }
 
@@ -41,7 +45,10 @@ cartForm = new FormGroup({
     
     this.dashboardService.addCart(this.cart)
       .subscribe(data => {
-          console.log('data',data);
+        this.imageExists = false;
+        this.cartForm.reset();
+        this.cart = new FormData();
+        this.element.nativeElement.querySelector('.image').src = '';
       },err => {
         alert(err);
       })
@@ -64,6 +71,7 @@ cartForm = new FormGroup({
     reader.onload = (e) => {
       let src = e.target['result'];
       image.src = src;
+      this.imageExists = true;
     };
 
     reader.readAsDataURL(event.target.files[0]);

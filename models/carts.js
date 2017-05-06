@@ -7,10 +7,8 @@ module.exports = (mongoose) => {
       description: String,
       price: String,
       owner : {
-        stories : {
           type: mongoose.Schema.Types.ObjectId,
           ref: 'user'
-        }
       },
       imageUrl: String
     }

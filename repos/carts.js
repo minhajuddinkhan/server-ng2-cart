@@ -12,8 +12,6 @@ module.exports = {
 function create(payload) {
 
   return carts.create(payload, (err,cart) =>{
-    console.log('err',err);
-    console.log('cart',cart);
     if(err) Promise.reject(err);
     else Promise.resolve(cart);
   })

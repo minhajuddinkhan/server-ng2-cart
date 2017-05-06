@@ -16,8 +16,10 @@ module.exports = class {
     app.use(bodyParser());
     app.use(morgan('dev'));
     app.use(cors());
+    app.use(express.static('uploads'));
 
-    routes.setup(app, express.Router());
+
+      routes.setup(app, express.Router());
 
     this.connectDb(mongoose)
       .then(()=>{

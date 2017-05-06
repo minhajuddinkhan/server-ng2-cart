@@ -28,8 +28,8 @@ function create(req,res) {
 function getAll(req,res) {
 
     repos.carts.find({})
-      .then((users) => {
-        res.status(200).json(users);
+      .then((carts) => {
+        res.status(200).json(carts);
       })
       .catch((err) => res.status(500).json(err));
 
