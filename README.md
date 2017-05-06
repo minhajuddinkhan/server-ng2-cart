@@ -16,21 +16,28 @@ A play around with NodeJS + Angular2 App
  
  
  Install nodejs server dependencies
+ 
  ``` npm install ```
  
  
  Run the server
+ 
  ``` node server ```
 
  In another terminal, go to the same path
- ``` cd ng2-cli ```
+
+``` cd ng2-cli ```
  
  
  Install angular2 dependencies
+ 
  ``` npm install ```
  
  
  start the angular2 awesome app!
+ 
  ``` npm start ```
 
- hit ```localhost:4200```
+ hit 
+ 
+ ```localhost:4200```
