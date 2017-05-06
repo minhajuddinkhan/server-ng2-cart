@@ -5,7 +5,11 @@ A play around with NodeJS + Angular2 App
 # Pre requisites
 
  Make sure you have ```angular-cli``` globally installed.
- if not, then run ``` npm install angular-cli -g ```
+ if not, then run
+
+ ``` npm install -g @angular/cli ```
+
+
  Projects requires ``` Node 6.9.0 ``` or higher, together with ```NPM 3 ``` or higher as per ``` angular-cli ``` requirements for Angular2.
  
  # Clone Project
