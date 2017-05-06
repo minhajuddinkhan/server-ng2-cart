@@ -36,4 +36,12 @@ export class HttpClient {
     });
   }
 
+  delete(url): Observable<any> {
+    let headers = new Headers();
+    this.createAuthorizationHeader(headers);
+    return this.http.delete(AppConfig.API_ENDPOINT+ url, {
+      headers: headers
+    });
+  }
+
 }

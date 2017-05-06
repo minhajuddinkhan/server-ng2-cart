@@ -54,6 +54,10 @@ cartForm = new FormGroup({
       })
 
   }
+  
+  changeState() {
+    this.state = 'create'  
+  }
 
   logout(){
       this.authService.logout();
@@ -61,7 +65,7 @@ cartForm = new FormGroup({
   }
 
 
-
+  
 
   fileChange(event) {
 

@@ -10,11 +10,20 @@
 </style>
 
 <div *ngFor="let item of cartList"  style="width: 20rem;">
+
+  <a (click)="removeCart(item._id)" class="close"> </a>
     <img class="image" [src]="item.imageUrl" alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">{{item.name}}</h4>
     <p class="card-text">{{ item.description }}</p>
+    <button (click)="removeCart(item._id)" class="btn btn-danger"> Remove </button>
   </div>
+</div>
+
+<div *ngIf="cartList.length == 0">
+    <h3>  Sorry, There are no products right now! :(   </h3>
+        <h4 (click)="createProduct()"> < Go create some ?</h4>
+
 </div>
 
 

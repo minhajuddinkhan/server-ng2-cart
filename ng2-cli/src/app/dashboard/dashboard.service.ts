@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '../app.rest';
 import { AppConfig} from '../app.config'
 @Injectable()
@@ -15,6 +15,11 @@ export class DashboardService {
        })
     }
 
+
+    @Output()
+    change = new EventEmitter();
+
+    
     public getAllCarts(){
         return this.http.get('cart')
         .map((res) => {
@@ -24,5 +29,15 @@ export class DashboardService {
             });
         } , (err)=> { throw err });
         
+    }
+
+    public removeCart(id: string) {
+        
+        return this.http.delete('cart' + '/' + id)
+        .map((res) => {
+            return res.json();
+        }, (err) => {
+            throw err;
+        })
     }
 }

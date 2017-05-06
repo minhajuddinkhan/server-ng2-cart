@@ -24,6 +24,7 @@ module.exports = class {
   static setup(router) {
 
    router.post('/cart',middlewares.auth.validateRequest, upload.single('imageFile'),controllers.cart.create)
-   router.get('/cart', middlewares.auth.validateRequest, controllers.cart.getAll)
+   router.get('/cart', middlewares.auth.validateRequest, controllers.cart.getAll);
+   router.delete('/cart/:id',middlewares.auth.validateRequest, controllers.cart.remove);
   }
 };

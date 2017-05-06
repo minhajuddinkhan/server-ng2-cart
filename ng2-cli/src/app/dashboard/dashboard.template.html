@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Node-Ng2-Cart</a>
     
 	</div>
     <ul class="nav navbar-nav">
@@ -27,8 +27,10 @@
 						</div>
 					</div>
 					<hr>
-				</div>
+				</div >
+						<div class="text-center">
 						<img [hidden]="!imageExists" class="image"  />
+						</div>
 								<div class="fileUpload btn btn-primary">
 									<span>Upload Image</span>
 									<input type="file" class="upload" (change)="fileChange($event)" />
@@ -44,16 +46,19 @@
 
 					
 								<div class="form-group">
-									<input type="text" formControlName="name" class="form-control" placeholder="name" value="" required>
+									<input type="text" formControlName="name" class="form-control" placeholder="TITLE" value="" required>
 								</div>
 								<div class="form-group">
-									<textarea class="form-control" formControlName="description" id=""  rows="10" required></textarea>
+									<input type="number" formControlName="name" class="form-control" placeholder="PRICE" value="" required>
+								</div>
+								<div class="form-group">
+									<textarea class="form-control" formControlName="description" id="" placeholder="TELL US SOMETHING ABOUT YOUR PRODUCT"  rows="10" required></textarea>
 								</div>
 
 								<div class="form-group">
 									<div class="row">
 										<div class="col-sm-6 col-sm-offset-3">
-											<input [disabled]="!cartForm.valid" type="submit" class="form-control btn btn-login" value="Create Cart">
+											<input [disabled]="!cartForm.valid || !imageExists" type="submit" class="form-control btn btn-login" value="Create Product">
 										</div>
 									</div>
 								</div>
@@ -65,7 +70,9 @@
 				</div>
 			</div>
 			<div *ngIf="state=='list'">
-					<cart-list></cart-list>
+					<cart-list
+					(change)="changeState()"
+					></cart-list>
 			</div>
 		</div>
 	</div>

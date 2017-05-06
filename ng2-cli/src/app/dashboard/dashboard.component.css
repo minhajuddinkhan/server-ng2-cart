@@ -26,3 +26,7 @@
 .selected {
   color: white !important; 
 }
+
+.text-center {
+  text-align: center
+}
