@@ -13,15 +13,23 @@ A play around with NodeJS + Angular2 App
  You can clone the project by typing ``` git clone https://github.com/minhajuddinkhan/server-ng2-cart ``` :)
 
  ``` cd server-ng2-cart ```
+ 
+ 
  Install nodejs server dependencies
  ``` npm install ```
+ 
+ 
  Run the server
- ``` node server ````
+ ``` node server ```
 
  In another terminal, go to the same path
  ``` cd ng2-cli ```
+ 
+ 
  Install angular2 dependencies
  ``` npm install ```
+ 
+ 
  start the angular2 awesome app!
  ``` npm start ```
 
