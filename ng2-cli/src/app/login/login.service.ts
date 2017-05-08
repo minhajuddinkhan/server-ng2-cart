@@ -33,7 +33,10 @@ export class AuthService {
       })
     }
     public logout(){
-      localStorage.removeItem('token');
+     delete localStorage.token
+  }
+    public isLoggedIn() {
+      return localStorage.hasOwnProperty('token');
     }
  
 }

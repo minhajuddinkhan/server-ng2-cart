@@ -12,10 +12,10 @@ export class AppComponent implements OnInit{
     private router: Router
     ){}
   ngOnInit(){
-        console.log('here');
             if(localStorage['token']){
                 this.router.navigate(['/dashboard']);
-            }else
-                this.router.navigate(['/login']);
-    }
+            } 
+   }
 }
+
+    

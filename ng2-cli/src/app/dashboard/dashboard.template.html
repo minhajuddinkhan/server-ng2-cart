@@ -10,7 +10,7 @@
       <li (click)="state='list'" class="cursor-pointer"><a  [ngClass]="{'selected' : state=='list'}">List</a></li>
     </ul>
   
-      <a class="navbar-brand" style="float: right" href="#">Log Out</a>
+      <a class="navbar-brand" style="float: right" (click)="logout()" >Log Out</a>
    
   </div>
 </nav>

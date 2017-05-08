@@ -5,7 +5,9 @@ import { DashboardModule } from './dashboard/dashboard.module'
 import { LoginModule } from './login/login.module'
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
-import { HttpClient } from './app.rest'
+import { HttpClient } from './app.rest';
+import { CanActivateRoute } from './app.authguard'
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { HttpClient } from './app.rest'
     
     AppRoutingModule
   ],
-  providers: [HttpClient],
-  bootstrap: [AppComponent]
+  providers: [
+  CanActivateRoute,
+    HttpClient
+  ],
+  bootstrap: [AppComponent,  ]
 })
 export class AppModule { }

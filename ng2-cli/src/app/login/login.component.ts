@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './login.service'
 import { FormControl, FormGroup } from '@angular/forms'
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ function cather() { }
     templateUrl: './login.template.html',
     styles: []
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
 
     state: string
@@ -36,6 +36,11 @@ export class LoginComponent {
 
     }
 
+    ngOnInit(){
+        if(this.authService.isLoggedIn()){
+            this.router.navigate(['/dashboard']);
+        }
+    }
 
     login(user) {
         this.authService.login(user)
